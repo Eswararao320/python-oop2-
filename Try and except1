@@ -1,0 +1,33 @@
+class BankAccount:
+    def __init__(self,account_num):
+        self.account_num=account_num
+        self.balance=0
+    def withdraw(self,amount):
+        if self.balance>=amount:
+            self.balance-=amount
+        else:
+            raise ValueError("Insufficient funds")
+    def diposit(self,amount):
+        self.balance+=amount
+    def get_balance(self):
+        return self.balance   
+def transfer_amount(acc_1,acc_2,amount):
+    try:
+        acc_1.withdraw(amount)
+        acc_2.diposit(amount)
+        return True
+    except:
+        return False
+user1=BankAccount("001")
+user2=BankAccount("002")
+user1.diposit(25)
+user2.diposit(100)
+print("user1 Balance:{}".format(user1.get_balance()))
+print("user2 Balance:{}".format(user2.get_balance()))
+print(transfer_amount(user1,user2,100))
+print("Transefer amount user1 to user2")
+
+print("user1 Balance:{}".format(user1.get_balance()))
+print("user2 Balance:{}".format(user2.get_balance()))
+
+        
