@@ -6,16 +6,16 @@ class BankAccount:
         if self.balance>=amount:
             self.balance-=amount
         else:
-            raise ValueError("Insufficient funds")
+            raise ValueError("Insufficient funds")### 
     def diposit(self,amount):
         self.balance+=amount
     def get_balance(self):
         return self.balance   
 def transfer_amount(acc_1,acc_2,amount):
     try:
-        acc_1.withdraw(amount)
+        acc_1.withdraw(amount)##try lo rasina function lo error raise vaste remaining code exicute avvadu
         acc_2.diposit(amount)
-        return True
+        return True ## error raise avvakapote code run avtadi True retun avtadi
     except:
         return False
 user1=BankAccount("001")
