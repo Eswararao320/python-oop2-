@@ -26,7 +26,7 @@ class Product:
 
   def get_deal_price(self):
 
-    print(self.deal_price)
+    print(self.deal_price
 
 class ElecronicItem(Product):
 
